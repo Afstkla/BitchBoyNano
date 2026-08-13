@@ -1,0 +1,853 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>BITCHBOY NANO — Two buttons</title>
+<meta name="description" content="A class-compliant USB-MIDI controller with every unnecessary control removed. All forty-seven of them. €2.79. In stock.">
+<link rel="canonical" href="https://bitchboynano.afstkla.nl">
+
+<meta property="og:type" content="product">
+<meta property="og:site_name" content="BITCHBOY NANO">
+<meta property="og:title" content="BITCHBOY NANO : Two buttons">
+<meta property="og:description" content="Every unnecessary control removed. All forty-seven of them. €2.79, in stock, ships today.">
+<meta property="og:url" content="https://bitchboynano.afstkla.nl">
+<meta property="og:image" content="https://bitchboynano.afstkla.nl/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="BITCHBOY NANO : Two buttons">
+<meta name="twitter:description" content="Every unnecessary control removed. All forty-seven of them. €2.79, in stock, ships today.">
+<meta name="twitter:image" content="https://bitchboynano.afstkla.nl/og.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "BITCHBOY NANO",
+  "description": "A class-compliant USB-MIDI controller with two buttons.",
+  "brand": { "@type": "Brand", "name": "Block System (Unauthorised)" },
+  "material": "ABS",
+  "offers": {
+    "@type": "Offer",
+    "url": "https://bitchboynano.afstkla.nl#buy",
+    "priceCurrency": "EUR",
+    "price": "2.79",
+    "availability": "https://schema.org/InStock",
+    "shippingDetails": {
+      "@type": "OfferShippingDetails",
+      "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "NL" }
+    }
+  }
+}
+</script>
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231A1A17'/%3E%3Crect x='5' y='11' width='9' height='10' fill='%23E8E8E3'/%3E%3Crect x='18' y='11' width='9' height='10' fill='%23FF4A00'/%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Martian+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --paper:#E8E8E3;
+  --card:#F2F2EE;
+  --ink:#101010;
+  --muted:#5B5B54;
+  --rule:#C6C6BE;
+  --signal:#FF4A00;
+  --pad:#1A1A17;
+
+  --display:"Archivo",system-ui,sans-serif;
+  --mono:"Martian Mono",ui-monospace,monospace;
+
+  --gutter:clamp(1.25rem,4vw,3.5rem);
+  --measure:64ch;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+
+body{
+  font-family:var(--display);
+  font-variation-settings:"wdth" 100;
+  font-size:clamp(1rem,0.95rem + 0.2vw,1.0625rem);
+  line-height:1.6;
+  color:var(--ink);
+  background-color:var(--paper);
+  background-image:
+    linear-gradient(to right,rgba(16,16,16,.055) 1px,transparent 1px),
+    linear-gradient(to bottom,rgba(16,16,16,.055) 1px,transparent 1px),
+    linear-gradient(to right,rgba(16,16,16,.03) 1px,transparent 1px),
+    linear-gradient(to bottom,rgba(16,16,16,.03) 1px,transparent 1px);
+  background-size:150px 150px,150px 150px,30px 30px,30px 30px;
+  overflow-x:hidden;
+}
+
+/* ---------- primitives ---------- */
+
+.wrap{max-width:1240px;margin-inline:auto;padding-inline:var(--gutter)}
+
+.label{
+  font-family:var(--mono);
+  font-size:.6875rem;
+  font-weight:400;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:var(--muted);
+}
+
+.rule{border:0;border-top:1px solid var(--rule)}
+
+.section{padding-block:clamp(4.5rem,11vh,8rem);border-top:1px solid var(--rule)}
+
+.section__head{
+  display:grid;
+  grid-template-columns:minmax(0,1fr);
+  gap:.75rem;
+  margin-bottom:clamp(2.25rem,5vw,3.5rem);
+}
+@media(min-width:900px){
+  .section__head{grid-template-columns:9rem minmax(0,1fr);gap:2.5rem;align-items:start}
+}
+
+.section__title{
+  font-size:clamp(2rem,1.2rem + 3.4vw,3.75rem);
+  font-weight:800;
+  font-variation-settings:"wdth" 108;
+  letter-spacing:-.03em;
+  line-height:.95;
+  text-wrap:balance;
+}
+
+.section__note{
+  font-family:var(--mono);
+  font-size:.6875rem;
+  line-height:1.7;
+  color:var(--muted);
+  letter-spacing:.04em;
+  padding-top:.4rem;
+}
+
+.prose{max-width:var(--measure)}
+.prose p + p{margin-top:1.15em}
+.prose strong{font-weight:700}
+
+a{color:var(--ink);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.2em;text-decoration-color:var(--rule)}
+a:hover{text-decoration-color:var(--signal);color:var(--signal)}
+:focus-visible{outline:2px solid var(--signal);outline-offset:3px}
+
+/* ---------- nav ---------- */
+
+.nav{
+  position:sticky;top:0;z-index:50;
+  background:color-mix(in srgb,var(--paper) 88%,transparent);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--rule);
+}
+.nav__in{
+  display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  height:3.25rem;
+}
+.nav__mark{
+  font-family:var(--mono);font-size:.6875rem;font-weight:600;
+  letter-spacing:.14em;text-transform:uppercase;text-decoration:none;
+}
+.nav__mark:hover{color:var(--ink)}
+.nav__links{display:flex;gap:1.25rem;list-style:none}
+.nav__links a{
+  font-family:var(--mono);font-size:.6875rem;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--muted);text-decoration:none;
+}
+.nav__links a:hover{color:var(--signal)}
+@media(max-width:640px){.nav__links li:not(:last-child){display:none}}
+
+/* ---------- hero ---------- */
+
+.hero{padding-block:clamp(3rem,8vh,6rem) clamp(3.5rem,9vh,6rem)}
+
+.hero__eyebrow{
+  display:flex;flex-wrap:wrap;gap:.4rem .9rem;align-items:center;
+  margin-bottom:clamp(1.75rem,4vw,2.75rem);
+}
+.tag{
+  font-family:var(--mono);font-size:.625rem;letter-spacing:.12em;text-transform:uppercase;
+  border:1px solid var(--rule);padding:.3rem .55rem;color:var(--muted);
+  background:var(--card);
+}
+.tag--live{border-color:var(--signal);color:var(--signal)}
+
+.hero__title{
+  font-size:clamp(3.4rem,11.8vw,10rem);
+  font-weight:900;
+  font-variation-settings:"wdth" 116;
+  letter-spacing:-.045em;
+  line-height:.82;
+  text-transform:uppercase;
+}
+.hero__title em{font-style:normal;color:var(--signal)}
+
+.hero__lede{
+  margin-top:clamp(1.75rem,4vw,2.5rem);
+  max-width:48ch;
+  font-size:clamp(1.0625rem,1rem + .5vw,1.375rem);
+  line-height:1.5;
+}
+
+.hero__grid{
+  margin-top:clamp(3rem,7vw,5rem);
+  display:grid;gap:clamp(2.5rem,5vw,4rem);
+  align-items:start;
+}
+@media(min-width:960px){
+  .hero__grid{grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr)}
+}
+
+/* ---------- the device ---------- */
+
+.rig{padding:2.75rem 3.25rem 2.5rem 0;position:relative}
+
+.device{
+  position:relative;
+  width:100%;max-width:520px;
+  aspect-ratio:58/34;
+  background:linear-gradient(168deg,#2C2C27 0%,var(--pad) 46%,#0E0E0C 100%);
+  border-radius:10px;
+  border:1px solid #3A3A33;
+  box-shadow:0 1px 0 rgba(255,255,255,.09) inset,0 22px 45px -22px rgba(16,16,16,.6);
+  display:flex;align-items:center;justify-content:center;
+  gap:6.5%;
+  padding:9% 9% 12%;
+}
+
+.device__port{
+  position:absolute;top:-1px;left:50%;transform:translateX(-50%);
+  width:13%;height:5px;background:#080807;border-radius:0 0 3px 3px;
+  border:1px solid #3A3A33;border-top:0;
+}
+.device__stamp{
+  position:absolute;left:50%;bottom:5%;transform:translateX(-50%);
+  font-family:var(--mono);font-size:clamp(.375rem,1.1vw,.5rem);
+  letter-spacing:.22em;color:#6E6E64;white-space:nowrap;
+}
+
+.key{
+  flex:1 1 0;
+  aspect-ratio:1;
+  max-height:100%;
+  font:inherit;
+  cursor:pointer;
+  border:1px solid #4A4A42;
+  border-radius:5px;
+  background:linear-gradient(180deg,#EFEFEA 0%,#CFCFC7 62%,#B6B6AD 100%);
+  box-shadow:0 1px 0 rgba(255,255,255,.85) inset,0 5px 0 #35352F,0 9px 14px -6px rgba(0,0,0,.55);
+  display:grid;place-items:center;
+  transition:transform .06s ease,box-shadow .06s ease,background .18s ease;
+  -webkit-tap-highlight-color:transparent;
+  touch-action:manipulation;
+}
+.key span{
+  font-family:var(--mono);font-size:clamp(.5rem,1.5vw,.6875rem);
+  font-weight:600;letter-spacing:.1em;color:#4C4C45;
+}
+.key.is-down{
+  transform:translateY(5px);
+  box-shadow:0 1px 0 rgba(255,255,255,.5) inset,0 0 0 #35352F,0 3px 7px -3px rgba(0,0,0,.5);
+  background:linear-gradient(180deg,var(--signal) 0%,#D93D00 100%);
+}
+.key.is-down span{color:#fff}
+
+/* dimension lines */
+.dim{position:absolute;color:var(--muted)}
+.dim span{
+  font-family:var(--mono);font-size:.625rem;letter-spacing:.06em;
+  background:var(--paper);padding:0 .4rem;
+}
+.dim--w{
+  left:0;right:3.25rem;bottom:1.1rem;height:1px;background:var(--rule);
+  display:flex;align-items:center;justify-content:center;
+}
+.dim--w::before,.dim--w::after{
+  content:"";position:absolute;top:-4px;width:1px;height:9px;background:var(--rule);
+}
+.dim--w::before{left:0}
+.dim--w::after{right:0}
+.dim--h{
+  top:2.75rem;bottom:2.5rem;right:1.4rem;width:1px;background:var(--rule);
+  display:flex;align-items:center;justify-content:center;
+}
+.dim--h span{writing-mode:vertical-rl}
+.dim--h::before,.dim--h::after{
+  content:"";position:absolute;left:-4px;height:1px;width:9px;background:var(--rule);
+}
+.dim--h::before{top:0}
+.dim--h::after{bottom:0}
+
+.rig__hint{
+  margin-top:.5rem;
+  font-family:var(--mono);font-size:.625rem;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--muted);
+}
+.rig__hint b{color:var(--signal);font-weight:400}
+
+/* ---------- monitor ---------- */
+
+.monitor{
+  border:1px solid var(--rule);
+  background:var(--card);
+}
+.monitor__bar{
+  display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  padding:.55rem .85rem;border-bottom:1px solid var(--rule);
+}
+.monitor__dot{
+  width:6px;height:6px;border-radius:50%;background:var(--rule);
+  transition:background .1s ease;
+}
+.monitor__dot.is-on{background:var(--signal)}
+.monitor__body{
+  font-family:var(--mono);
+  font-size:clamp(.5625rem,1.4vw,.6875rem);
+  line-height:1.85;
+  padding:.85rem;
+  min-height:13.5rem;
+  white-space:pre;
+  overflow-x:auto;
+  color:var(--muted);
+}
+.monitor__body b{color:var(--ink);font-weight:400}
+.monitor__body i{color:var(--signal);font-style:normal}
+
+/* ---------- spec ---------- */
+
+.spec{display:grid;gap:0;border-top:1px solid var(--rule)}
+.spec__row{
+  display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);
+  gap:1rem;padding:.7rem 0;border-bottom:1px solid var(--rule);
+  align-items:baseline;
+}
+.spec__k{font-family:var(--mono);font-size:.6875rem;letter-spacing:.06em;color:var(--muted)}
+.spec__v{font-family:var(--mono);font-size:.75rem;letter-spacing:.02em}
+@media(min-width:900px){
+  .spec{grid-template-columns:1fr 1fr;column-gap:clamp(2rem,4vw,4rem)}
+  .spec__row:nth-last-child(-n+2){border-bottom:1px solid var(--rule)}
+}
+
+/* ---------- comparison ---------- */
+
+.vs{width:100%;border-collapse:collapse;font-family:var(--mono);font-size:.75rem}
+.vs caption{
+  caption-side:bottom;text-align:left;padding-top:1rem;
+  font-size:.625rem;color:var(--muted);letter-spacing:.04em;line-height:1.7;
+}
+.vs th,.vs td{padding:.7rem .5rem;border-bottom:1px solid var(--rule);text-align:left;vertical-align:top}
+.vs thead th{
+  font-size:.625rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600;
+  border-bottom:1px solid var(--ink);padding-bottom:.6rem;
+}
+.vs thead th:nth-child(2){color:var(--signal)}
+.vs thead th:nth-child(3){color:var(--muted)}
+.vs tbody th{font-weight:400;color:var(--muted);letter-spacing:.04em;width:38%}
+.vs td:nth-child(2){font-weight:600;width:26%}
+.vs td:nth-child(3){color:var(--muted);width:36%}
+.vs tbody tr:hover th,.vs tbody tr:hover td{background:var(--card)}
+@media(max-width:640px){
+  .vs{font-size:.625rem}
+  .vs th,.vs td{padding:.6rem .35rem}
+  .vs tbody th{width:34%}
+}
+
+/* ---------- manifesto ---------- */
+
+.manifesto{display:grid;gap:clamp(2rem,4vw,3.5rem)}
+@media(min-width:900px){.manifesto{grid-template-columns:minmax(0,1fr) 15rem;align-items:start}}
+
+.manifesto__open{
+  font-size:clamp(1.375rem,1.1rem + 1.4vw,2rem);
+  line-height:1.3;font-weight:600;letter-spacing:-.015em;
+  font-variation-settings:"wdth" 104;
+  margin-bottom:1.5em;text-wrap:pretty;
+}
+.aside{
+  border-left:1px solid var(--rule);padding-left:1.25rem;
+  display:grid;gap:1.5rem;
+}
+.aside__item{font-family:var(--mono);font-size:.625rem;line-height:1.8;color:var(--muted);letter-spacing:.03em}
+.aside__item b{display:block;color:var(--ink);font-weight:600;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.35rem}
+
+/* ---------- code ---------- */
+
+.code{
+  border:1px solid var(--rule);background:var(--card);
+  padding:1rem 1.1rem;overflow-x:auto;
+  font-family:var(--mono);font-size:.6875rem;line-height:2;
+  letter-spacing:.01em;
+}
+.code .c{color:var(--muted)}
+
+/* ---------- quotes ---------- */
+
+.quotes{display:grid;gap:1px;background:var(--rule);border:1px solid var(--rule)}
+@media(min-width:820px){.quotes{grid-template-columns:repeat(3,1fr)}}
+.quote{background:var(--paper);padding:clamp(1.5rem,3vw,2.25rem);display:flex;flex-direction:column;gap:1.25rem}
+.quote__text{
+  font-size:clamp(1.0625rem,1rem + .4vw,1.25rem);line-height:1.4;
+  font-weight:600;letter-spacing:-.015em;flex:1;
+}
+.quote__by{font-family:var(--mono);font-size:.625rem;line-height:1.7;color:var(--muted);letter-spacing:.05em}
+.quote__by b{color:var(--ink);font-weight:600;display:block;text-transform:uppercase;letter-spacing:.1em}
+
+/* ---------- buy ---------- */
+
+.buy{display:grid;gap:clamp(2rem,4vw,3rem);align-items:end}
+@media(min-width:820px){.buy{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}}
+
+.price{
+  font-size:clamp(4rem,3rem + 8vw,9rem);font-weight:900;
+  font-variation-settings:"wdth" 116;letter-spacing:-.05em;line-height:.85;
+}
+.price small{font-size:.26em;font-weight:700;letter-spacing:.02em;vertical-align:1.95em;margin-left:.06em;color:var(--muted);font-variation-settings:"wdth" 108}
+
+.cta{
+  display:inline-flex;align-items:center;justify-content:space-between;gap:1.5rem;
+  width:100%;padding:1.1rem 1.35rem;
+  background:var(--ink);color:var(--paper);text-decoration:none;
+  font-family:var(--mono);font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;
+  border:1px solid var(--ink);
+  transition:background .15s ease,color .15s ease;
+}
+.cta:hover{background:var(--signal);border-color:var(--signal);color:#fff}
+.cta--ghost{background:transparent;color:var(--ink);border-color:var(--rule);margin-top:.75rem}
+.cta--ghost:hover{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+.cta span:last-child{font-size:1rem;line-height:1}
+
+.stock{display:grid;gap:.55rem;margin-bottom:1.5rem}
+.stock__row{
+  display:flex;justify-content:space-between;gap:1rem;
+  font-family:var(--mono);font-size:.6875rem;letter-spacing:.05em;
+  padding-bottom:.55rem;border-bottom:1px solid var(--rule);
+}
+.stock__row b{font-weight:400;color:var(--muted)}
+.stock__row i{font-style:normal;color:var(--signal)}
+
+/* ---------- footer / title block ---------- */
+
+.foot{border-top:1px solid var(--ink);padding-block:0 3rem}
+.block{display:grid;border:1px solid var(--rule);border-top:0;font-family:var(--mono);font-size:.625rem}
+@media(min-width:760px){.block{grid-template-columns:repeat(4,1fr)}}
+.block__cell{padding:.85rem 1rem;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.block__cell:last-child{border-right:0}
+.block__cell b{display:block;color:var(--muted);font-weight:400;letter-spacing:.12em;text-transform:uppercase;margin-bottom:.3rem;font-size:.5625rem}
+.foot__end{
+  display:flex;flex-wrap:wrap;gap:.5rem 1.5rem;justify-content:space-between;
+  padding-top:1.25rem;
+  font-family:var(--mono);font-size:.5625rem;letter-spacing:.06em;color:var(--muted);text-transform:uppercase;
+}
+
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition-duration:.01ms!important;animation-duration:.01ms!important}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap nav__in">
+    <a class="nav__mark" href="#top">Bitchboy&nbsp;Nano</a>
+    <ul class="nav__links">
+      <li><a href="#spec">Spec</a></li>
+      <li><a href="#compare">Compare</a></li>
+      <li><a href="#forty-nine">Position</a></li>
+      <li><a href="#firmware">Firmware</a></li>
+      <li><a href="#buy">Buy</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero wrap" id="top">
+  <div class="hero__eyebrow">
+    <span class="tag tag--live">In stock</span>
+    <span class="tag">Block System — unauthorised</span>
+    <span class="tag">No region selection required</span>
+  </div>
+
+  <h1 class="hero__title">Two<br>buttons<em>.</em></h1>
+
+  <p class="hero__lede">
+    A class-compliant USB-MIDI controller with every unnecessary control removed.
+    All forty-seven of them.
+  </p>
+
+  <div class="hero__grid">
+    <div>
+      <div class="rig">
+        <div class="device" id="device">
+          <div class="device__port"></div>
+          <button class="key" data-note="60" data-name="C4" data-pin="P3.2" aria-label="Pad one, note C4"><span>01</span></button>
+          <button class="key" data-note="67" data-name="G4" data-pin="P1.4" aria-label="Pad two, note G4"><span>02</span></button>
+          <div class="device__stamp">MIDI PAD · 1209:0001</div>
+        </div>
+        <div class="dim dim--w"><span>58.0</span></div>
+        <div class="dim dim--h"><span>34.0</span></div>
+      </div>
+      <p class="rig__hint">Press them. Or use <b>1</b> and <b>2</b>. Sound is real MIDI notes.</p>
+    </div>
+
+    <div>
+      <div class="monitor">
+        <div class="monitor__bar">
+          <span class="label">pad.py monitor</span>
+          <span class="monitor__dot" id="dot" aria-hidden="true"></span>
+        </div>
+        <div class="monitor__body" id="monitor" role="log" aria-live="polite" aria-label="MIDI monitor output"></div>
+      </div>
+      <p class="rig__hint" style="margin-top:.85rem">
+        Output format is not a mockup. It is what the firmware actually prints.
+      </p>
+    </div>
+  </div>
+</header>
+
+<section class="section wrap" id="spec">
+  <div class="section__head">
+    <p class="label">01 — Datasheet</p>
+    <div>
+      <h2 class="section__title">Everything it does</h2>
+      <p class="prose" style="margin-top:1.25rem">
+        The complete specification. There is no second page.
+      </p>
+    </div>
+  </div>
+
+  <div class="spec">
+    <div class="spec__row"><div class="spec__k">Controls</div><div class="spec__v">2 × mechanical key</div></div>
+    <div class="spec__row"><div class="spec__k">Microcontroller</div><div class="spec__v">CH552G</div></div>
+    <div class="spec__row"><div class="spec__k">Protocol</div><div class="spec__v">USB-MIDI 1.0, class-compliant</div></div>
+    <div class="spec__row"><div class="spec__k">Drivers</div><div class="spec__v">None. That is the point.</div></div>
+    <div class="spec__row"><div class="spec__k">Modes</div><div class="spec__v">Note on/off · Control change</div></div>
+    <div class="spec__row"><div class="spec__k">MIDI channel</div><div class="spec__v">1–16, your choice</div></div>
+    <div class="spec__row"><div class="spec__k">Latency</div><div class="spec__v">USB polling. Below your reaction time.</div></div>
+    <div class="spec__row"><div class="spec__k">Enclosure</div><div class="spec__v">Injection-moulded ABS</div></div>
+    <div class="spec__row"><div class="spec__k">Cosmetic variation</div><div class="spec__v">None. Moulds do not have moods.</div></div>
+    <div class="spec__row"><div class="spec__k">Dimensions</div><div class="spec__v">58 × 34 × 22 mm, approx.</div></div>
+    <div class="spec__row"><div class="spec__k">Host support</div><div class="spec__v">Resolume · TouchDesigner · any DAW · iPad · hardware synth</div></div>
+    <div class="spec__row"><div class="spec__k">Firmware</div><div class="spec__v">Open source, MIT-adjacent, yours to edit</div></div>
+    <div class="spec__row"><div class="spec__k">Configuration</div><div class="spec__v">One header file. Sixteen lines.</div></div>
+    <div class="spec__row"><div class="spec__k">Bricking risk</div><div class="spec__v">Zero. Bootloader is in mask ROM.</div></div>
+    <div class="spec__row"><div class="spec__k">Unit availability</div><div class="spec__v">A drawer in Amsterdam</div></div>
+    <div class="spec__row"><div class="spec__k">Lead time</div><div class="spec__v">The length of this sentence</div></div>
+  </div>
+</section>
+
+<section class="section wrap" id="compare">
+  <div class="section__head">
+    <p class="label">02 — Comparison</p>
+    <div>
+      <h2 class="section__title">Against the full-size</h2>
+      <p class="prose" style="margin-top:1.25rem">
+        We admire the Classic enormously. It is the most complete answer we have seen
+        to a question nobody finished asking.
+      </p>
+    </div>
+  </div>
+
+  <table class="vs">
+    <thead>
+      <tr>
+        <th scope="col">Measure</th>
+        <th scope="col">Nano</th>
+        <th scope="col">Classic</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><th scope="row">Keys</th><td>2</td><td>49</td></tr>
+      <tr><th scope="row">Faders</th><td>0</td><td>12</td></tr>
+      <tr><th scope="row">Knobs</th><td>0</td><td>8</td></tr>
+      <tr><th scope="row">XY pads</th><td>0</td><td>1</td></tr>
+      <tr><th scope="row">Controls to learn</th><td>2</td><td>70</td></tr>
+      <tr><th scope="row">Price</th><td>€2.79</td><td>€464</td></tr>
+      <tr><th scope="row">Price per control</th><td>€1.40</td><td>€6.63</td></tr>
+      <tr><th scope="row">Availability</th><td>In stock</td><td>Pre-order</td></tr>
+      <tr><th scope="row">Ships</th><td>Today</td><td>Q4 2026</td></tr>
+      <tr><th scope="row">Enclosure</th><td>Injection-moulded ABS</td><td>3D-printed PETG</td></tr>
+      <tr><th scope="row">Cosmetic variation</th><td>None</td><td>“Minor cosmetic variations may exist”</td></tr>
+      <tr><th scope="row">Fits in a pocket</th><td>Yes</td><td>Fits in a car</td></tr>
+      <tr><th scope="row">Region selection required</th><td>No</td><td>Yes</td></tr>
+      <tr><th scope="row">Survives a festival toilet</th><td>Yes</td><td>Financially, no</td></tr>
+      <tr><th scope="row">Replacement cost if stolen</th><td>€2.79</td><td>A conversation with your insurer</td></tr>
+      <tr><th scope="row">Firmware</th><td>Open source</td><td>Open source</td></tr>
+    </tbody>
+    <caption>
+      Classic figures taken from bitchboy.lol as published, August 2026. Firmware row is a tie —
+      the same person wrote both, which is the part we would like to draw attention to.
+    </caption>
+  </table>
+</section>
+
+<section class="section wrap" id="forty-nine">
+  <div class="section__head">
+    <p class="label">03 — Position</p>
+    <div>
+      <h2 class="section__title">On the question of forty-nine</h2>
+    </div>
+  </div>
+
+  <div class="manifesto">
+    <div class="prose">
+      <p class="manifesto__open">
+        Forty-nine keys is not a design decision. It is forty-seven deferred ones,
+        handed to you at one in the morning, in the dark, in front of people.
+      </p>
+      <p>
+        Every control on a surface is a question the designer declined to answer. Which
+        one is the kick. Which one is the strobe. Which fader was the good one last time.
+        A large controller does not give you options; it gives you a subscription to
+        second-guessing, billed live, in front of an audience that came to dance.
+      </p>
+      <p>
+        The Nano answers both of its questions at the factory. There is a left one and
+        a right one. In eighteen months of field use we have not once observed a
+        performer look down.
+      </p>
+      <p>
+        We are aware of the counter-argument: that a controller should have a fader for
+        everything. We have read it carefully. It has a lead time of five hundred days.
+      </p>
+      <p>
+        <strong>We considered three buttons.</strong> The prototype was returned to the drawer.
+        Three introduces a middle, a middle introduces a preference, and a preference is
+        just a fader that has not admitted it yet.
+      </p>
+      <p>
+        Two is not a limitation we accepted. It is the only number we could defend.
+      </p>
+    </div>
+
+    <div class="aside">
+      <div class="aside__item">
+        <b>Fig. 1</b>
+        Controls a performer can reach without breaking eye contact with the room: 2.
+      </div>
+      <div class="aside__item">
+        <b>Fig. 2</b>
+        Time to learn the full surface. Nano: the time it takes to read this. Classic: a winter.
+      </div>
+      <div class="aside__item">
+        <b>Fig. 3</b>
+        An XY pad is two faders that have stopped labelling themselves.
+      </div>
+      <div class="aside__item">
+        <b>Note</b>
+        The Classic is a genuinely beautiful object. Our objection is arithmetic, not aesthetic.
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section wrap" id="firmware">
+  <div class="section__head">
+    <p class="label">04 — Firmware</p>
+    <div>
+      <h2 class="section__title">Written by the competition</h2>
+      <p class="prose" style="margin-top:1.25rem">
+        The firmware is not ours. It was written by
+        <a href="https://github.com/chrisssstos/2button-pad-hack" rel="noopener">Chris</a>,
+        who also designed the Classic. He turned a €2.79 macropad into a real
+        class-compliant MIDI device over a weekend, and then published it under a licence
+        that lets anyone do this. Commercially, we consider that his one mistake. Every
+        other decision in it is excellent, and we did not change a line.
+      </p>
+    </div>
+  </div>
+
+  <div class="prose" style="max-width:none">
+    <div class="code"><span class="c"># the whole install</span>
+brew install sdcc libusb
+python3 -m venv venv &amp;&amp; ./venv/bin/pip install pyusb mido python-rtmidi
+
+./venv/bin/python pad.py flash      <span class="c"># build + flash</span>
+./venv/bin/python pad.py monitor    <span class="c"># watch what it sends</span></div>
+
+    <p style="margin-top:1.75rem;max-width:var(--measure)">
+      No host software. No keystroke-to-MIDI translator. No configurator that only runs on
+      Windows. The pad enumerates as <code style="font-family:var(--mono);font-size:.8em">1209:0001 “MIDI Pad”</code>
+      and every operating system made in the last twenty years already knows what to do with it.
+    </p>
+    <p style="margin-top:1.15em;max-width:var(--measure)">
+      One file configures the whole device — pins, channel, note or CC, product name. If you
+      want a two-pedal sustain footswitch instead of two notes, that is two values and a reflash.
+    </p>
+    <p style="margin-top:1.15em;max-width:var(--measure)">
+      Flashing is one-way: the WCH bootloader writes and verifies flash but cannot read it, so the
+      stock firmware is gone for good. The chip itself is unbrickable — its bootloader lives in
+      mask ROM. Worst case, you flash it again.
+    </p>
+    <a class="cta cta--ghost" style="max-width:26rem" href="https://github.com/chrisssstos/2button-pad-hack" rel="noopener">
+      <span>Read the source</span><span>→</span>
+    </a>
+  </div>
+</section>
+
+<section class="section wrap" id="quotes">
+  <div class="section__head">
+    <p class="label">05 — Reception</p>
+    <div>
+      <h2 class="section__title">What people said</h2>
+      <p class="prose" style="margin-top:1.25rem">
+        We have fewer endorsements than the Classic. We have reproduced its ones below,
+        clearly labelled, because we believe in attribution.
+      </p>
+    </div>
+  </div>
+
+  <div class="quotes">
+    <div class="quote">
+      <p class="quote__text">“man i just think bitchboy is dope”</p>
+      <p class="quote__by"><b>Sean Bowes</b>Quoted on bitchboy.lol, regarding the Classic. We have chosen to read it generously.</p>
+    </div>
+    <div class="quote">
+      <p class="quote__text">“damn did you put olive oil on the faders”</p>
+      <p class="quote__by"><b>SPACE LACES</b>Also regarding the Classic. Regarding faders. Of which we have none.</p>
+    </div>
+    <div class="quote">
+      <p class="quote__text">“wait, which one is left”</p>
+      <p class="quote__by"><b>Owner, week one</b>The only support ticket we have received. It was the left one.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section wrap" id="buy">
+  <div class="section__head">
+    <p class="label">06 — Order</p>
+    <div>
+      <h2 class="section__title">Available now, which is the whole argument</h2>
+    </div>
+  </div>
+
+  <div class="buy">
+    <div>
+      <p class="price">€2<small>.79</small></p>
+      <p class="prose" style="margin-top:1.5rem">
+        Per unit, firmware included, no pre-order, no deposit, no Q4. Stock is a drawer in
+        Amsterdam and the drawer is not empty.
+      </p>
+    </div>
+
+    <div>
+      <div class="stock">
+        <div class="stock__row"><b>Availability</b><i>In stock</i></div>
+        <div class="stock__row"><b>Ships</b><span>Today</span></div>
+        <div class="stock__row"><b>Lead time</b><span>0 days</span></div>
+        <div class="stock__row"><b>Warranty</b><span>Buy two</span></div>
+        <div class="stock__row"><b>Returns</b><span>Keep it</span></div>
+      </div>
+      <a class="cta" href="mailto:job@neople.io?subject=BITCHBOY%20NANO&amp;body=I%20would%20like%20the%20one%20with%20two%20buttons.">
+        <span>Ask Job for one</span><span>→</span>
+      </a>
+      <a class="cta cta--ghost" href="https://bitchboy.lol" rel="noopener">
+        <span>Or pre-order 47 more buttons</span><span>↗</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="block">
+      <div class="block__cell"><b>Drawing</b>BBN-001 · REV A</div>
+      <div class="block__cell"><b>Scale</b>1:1 · Units mm</div>
+      <div class="block__cell"><b>Material</b>ABS · CH552G</div>
+      <div class="block__cell"><b>Sheet</b>1 of 1</div>
+      <div class="block__cell"><b>Firmware</b><a href="https://github.com/chrisssstos/2button-pad-hack" rel="noopener">chrisssstos/2button-pad-hack</a></div>
+      <div class="block__cell"><b>Prior art</b><a href="https://bitchboy.lol" rel="noopener">bitchboy.lol</a></div>
+      <div class="block__cell"><b>Status</b>Unauthorised, affectionate</div>
+      <div class="block__cell"><b>Region</b>All of them</div>
+    </div>
+    <div class="foot__end">
+      <span>Bitchboy Nano — a parody, built by a friend</span>
+      <span>Not affiliated with Block System · Buy the real one too</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(() => {
+  const monitor = document.getElementById('monitor');
+  const dot = document.getElementById('dot');
+  const keys = [...document.querySelectorAll('.key')];
+  const MAX_LINES = 9;
+  let ctx = null;
+
+  const boot = [
+    '<b>$ ./venv/bin/python pad.py monitor</b>',
+    'connected  1209:0001 "MIDI Pad"',
+    'listening  ch 1 · note mode',
+    '<i>press a key</i>'
+  ];
+  monitor.innerHTML = boot.join('\n');
+
+  const print = (line) => {
+    const lines = monitor.innerHTML.split('\n').filter(Boolean);
+    if (lines[lines.length - 1] === '<i>press a key</i>') lines.pop();
+    lines.push(line);
+    monitor.innerHTML = lines.slice(-MAX_LINES).join('\n');
+    monitor.scrollTop = monitor.scrollHeight;
+  };
+
+  const pad = (s, n) => s + ' '.repeat(Math.max(0, n - s.length));
+
+  const tone = (note, on) => {
+    if (!on) return;
+    try {
+      ctx = ctx || new (window.AudioContext || window.webkitAudioContext)();
+      if (ctx.state === 'suspended') ctx.resume();
+      const t = ctx.currentTime;
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      osc.type = 'square';
+      osc.frequency.value = 440 * Math.pow(2, (note - 69) / 12);
+      gain.gain.setValueAtTime(0.0001, t);
+      gain.gain.exponentialRampToValueAtTime(0.13, t + 0.006);
+      gain.gain.exponentialRampToValueAtTime(0.0001, t + 0.45);
+      osc.connect(gain).connect(ctx.destination);
+      osc.start(t);
+      osc.stop(t + 0.5);
+    } catch (e) { /* no audio, the page still works */ }
+  };
+
+  const setKey = (key, down) => {
+    if (key.classList.contains('is-down') === down) return;
+    key.classList.toggle('is-down', down);
+    dot.classList.toggle('is-on', keys.some(k => k.classList.contains('is-down')));
+
+    const note = Number(key.dataset.note);
+    const label = pad(`note ${note} (${key.dataset.name})`, 16);
+    print(down
+      ? `${pad('press', 9)}<b>${label}</b>ch 1  &lt;- pin ${key.dataset.pin}`
+      : `${pad('release', 9)}${label}ch 1`);
+    tone(note, down);
+  };
+
+  keys.forEach(key => {
+    const down = (e) => { e.preventDefault(); setKey(key, true); };
+    const up = () => setKey(key, false);
+    key.addEventListener('pointerdown', down);
+    key.addEventListener('pointerup', up);
+    key.addEventListener('pointerleave', up);
+    key.addEventListener('pointercancel', up);
+    key.addEventListener('keydown', e => { if (e.key === ' ' || e.key === 'Enter') down(e); });
+    key.addEventListener('keyup', e => { if (e.key === ' ' || e.key === 'Enter') up(); });
+  });
+
+  const bindings = { '1': keys[0], '2': keys[1], 'ArrowLeft': keys[0], 'ArrowRight': keys[1] };
+  addEventListener('keydown', e => {
+    const key = bindings[e.key];
+    if (key && !e.repeat && !e.metaKey && !e.ctrlKey) { e.preventDefault(); setKey(key, true); }
+  });
+  addEventListener('keyup', e => {
+    const key = bindings[e.key];
+    if (key) setKey(key, false);
+  });
+})();
+</script>
+</body>
+</html>
