@@ -484,7 +484,7 @@ a:hover{text-decoration-color:var(--signal);color:var(--signal)}
           <div class="device__port"></div>
           <button class="key" data-note="60" data-name="C4" data-pin="P3.2" aria-label="Pad one, note C4"><span>01</span></button>
           <button class="key" data-note="67" data-name="G4" data-pin="P1.4" aria-label="Pad two, note G4"><span>02</span></button>
-          <div class="device__stamp">MIDI PAD · 1209:0001</div>
+          <div class="device__stamp">BITCHBOY NANO · 1209:0001</div>
         </div>
         <div class="dim dim--w"><span>58.0</span></div>
         <div class="dim dim--h"><span>34.0</span></div>
@@ -524,14 +524,16 @@ a:hover{text-decoration-color:var(--signal);color:var(--signal)}
     <div class="spec__row"><div class="spec__k">Protocol</div><div class="spec__v">USB-MIDI 1.0, class-compliant</div></div>
     <div class="spec__row"><div class="spec__k">Drivers</div><div class="spec__v">None. That is the point.</div></div>
     <div class="spec__row"><div class="spec__k">Modes</div><div class="spec__v">Note on/off · Control change</div></div>
-    <div class="spec__row"><div class="spec__k">MIDI channel</div><div class="spec__v">1–16, your choice</div></div>
+    <div class="spec__row"><div class="spec__k">MIDI channel</div><div class="spec__v">1–16, per key</div></div>
     <div class="spec__row"><div class="spec__k">Latency</div><div class="spec__v">USB polling. Below your reaction time.</div></div>
     <div class="spec__row"><div class="spec__k">Enclosure</div><div class="spec__v">Injection-moulded ABS</div></div>
     <div class="spec__row"><div class="spec__k">Cosmetic variation</div><div class="spec__v">None. Moulds do not have moods.</div></div>
     <div class="spec__row"><div class="spec__k">Dimensions</div><div class="spec__v">58 × 34 × 22 mm, approx.</div></div>
     <div class="spec__row"><div class="spec__k">Host support</div><div class="spec__v">Resolume · TouchDesigner · any DAW · iPad · hardware synth</div></div>
-    <div class="spec__row"><div class="spec__k">Firmware</div><div class="spec__v">Open source, MIT-adjacent, yours to edit</div></div>
-    <div class="spec__row"><div class="spec__k">Configuration</div><div class="spec__v">One header file. Sixteen lines.</div></div>
+    <div class="spec__row"><div class="spec__k">Keyboard mode</div><div class="spec__v">Yes, obviously. Keys, combos, text, macros.</div></div>
+    <div class="spec__row"><div class="spec__k">Lighting</div><div class="spec__v">Green and blue, per key. Red is fitted. Red is not wired.</div></div>
+    <div class="spec__row"><div class="spec__k">Firmware</div><div class="spec__v">Open source, CC BY-SA, yours to edit</div></div>
+    <div class="spec__row"><div class="spec__k">Configuration</div><div class="spec__v">One window. No compiler.</div></div>
     <div class="spec__row"><div class="spec__k">Bricking risk</div><div class="spec__v">Zero. Bootloader is in mask ROM.</div></div>
     <div class="spec__row"><div class="spec__k">Unit availability</div><div class="spec__v">A drawer in Amsterdam</div></div>
     <div class="spec__row"><div class="spec__k">Lead time</div><div class="spec__v">The length of this sentence</div></div>
@@ -574,11 +576,12 @@ a:hover{text-decoration-color:var(--signal);color:var(--signal)}
       <tr><th scope="row">Region selection required</th><td>No</td><td>Yes</td></tr>
       <tr><th scope="row">Survives a festival toilet</th><td>Yes</td><td>Financially, no</td></tr>
       <tr><th scope="row">Replacement cost if stolen</th><td>€2.79</td><td>A conversation with your insurer</td></tr>
+      <tr><th scope="row">Doubles as a keyboard</th><td>Yes</td><td>No</td></tr>
       <tr><th scope="row">Firmware</th><td>Open source</td><td>Open source</td></tr>
     </tbody>
     <caption>
       Classic figures taken from bitchboy.lol as published, August 2026. Firmware row is a tie —
-      the same person wrote both, which is the part we would like to draw attention to.
+      the same person did the hard part of both, which is the part we would like to draw attention to.
     </caption>
   </table>
 </section>
@@ -649,39 +652,44 @@ a:hover{text-decoration-color:var(--signal);color:var(--signal)}
     <div>
       <h2 class="section__title">Written by the competition</h2>
       <p class="prose" style="margin-top:1.25rem">
-        The firmware is not ours. It was written by
+        The hard part is not ours. The pin map, the bootloader trick and the MIDI descriptor
+        all come from
         <a href="https://github.com/chrisssstos/2button-pad-hack" rel="noopener">Christos</a>,
         who also designed the Classic. He turned a €2.79 macropad into a real
         class-compliant MIDI device over a weekend, and then published it under a licence
-        that lets anyone do this. Commercially, we consider that his one mistake. Every
-        other decision in it is excellent, and we did not change a line.
+        that lets anyone do this. Commercially, we consider that his one mistake. We have
+        put it in an app, so that repeating it no longer requires a compiler.
       </p>
     </div>
   </div>
 
   <div class="prose" style="max-width:none">
     <div class="code"><span class="c"># the whole install</span>
-brew install sdcc libusb
-python3 -m venv venv &amp;&amp; ./venv/bin/pip install pyusb mido python-rtmidi
-
-./venv/bin/python pad.py flash      <span class="c"># build + flash</span>
-./venv/bin/python pad.py monitor    <span class="c"># watch what it sends</span></div>
+unzip BitchBoyNano.zip
+open "BitchBoy Nano.app"    <span class="c"># pick two notes, hit Flash</span></div>
 
     <p style="margin-top:1.75rem;max-width:var(--measure)">
       No host software. No keystroke-to-MIDI translator. No configurator that only runs on
-      Windows. The pad enumerates as <code style="font-family:var(--mono);font-size:.8em">1209:0001 “MIDI Pad”</code>
+      Windows. The pad enumerates as <code style="font-family:var(--mono);font-size:.8em">1209:0001 “BitchBoy Nano”</code>
       and every operating system made in the last twenty years already knows what to do with it.
     </p>
     <p style="margin-top:1.15em;max-width:var(--measure)">
-      One file configures the whole device — pins, channel, note or CC, product name. If you
-      want a two-pedal sustain footswitch instead of two notes, that is two values and a reflash.
+      One window configures the whole device — note or CC per key, channel per key, and what
+      the lights do. If you want a sustain pedal instead of two notes, that is one dropdown and
+      a reflash. The first flash needs a 10k resistor across two pins for a second; after that,
+      hold both keys while plugging in.
+    </p>
+    <p style="margin-top:1.15em;max-width:var(--measure)">
+      It can also be a keyboard, obviously. Any key, any combo, a line of text, a whole
+      recorded macro — save on the left, undo on the right. The Classic cannot do this. It is
+      MIDI and only MIDI, which is principled, and also boring.
     </p>
     <p style="margin-top:1.15em;max-width:var(--measure)">
       Flashing is one-way: the WCH bootloader writes and verifies flash but cannot read it, so the
       stock firmware is gone for good. The chip itself is unbrickable — its bootloader lives in
       mask ROM. Worst case, you flash it again.
     </p>
-    <a class="cta cta--ghost" style="max-width:26rem" href="https://github.com/chrisssstos/2button-pad-hack" rel="noopener">
+    <a class="cta cta--ghost" style="max-width:26rem" href="https://github.com/Afstkla/bitchboy-nano-flasher" rel="noopener">
       <span>Read the source</span><span>→</span>
     </a>
   </div>
@@ -742,8 +750,8 @@ python3 -m venv venv &amp;&amp; ./venv/bin/pip install pyusb mido python-rtmidi
         <div class="stock__row"><b>Returns</b><span>Keep it</span></div>
         <div class="stock__row"><b>Distribution</b><span>By hand</span></div>
       </div>
-      <a class="cta" href="https://github.com/chrisssstos/2button-pad-hack" rel="noopener">
-        <span>Flash one yourself</span><span>→</span>
+      <a class="cta" href="https://github.com/Afstkla/bitchboy-nano-flasher/releases/latest" rel="noopener">
+        <span>Flash one yourself · macOS</span><span>→</span>
       </a>
       <a class="cta cta--ghost" href="https://bitchboy.lol" rel="noopener">
         <span>Or pre-order 47 more buttons</span><span>↗</span>
@@ -755,11 +763,11 @@ python3 -m venv venv &amp;&amp; ./venv/bin/pip install pyusb mido python-rtmidi
 <footer class="foot">
   <div class="wrap">
     <div class="block">
-      <div class="block__cell"><b>Drawing</b>BBN-001 · REV A</div>
+      <div class="block__cell"><b>Drawing</b>BBN-001 · REV B</div>
       <div class="block__cell"><b>Scale</b>1:1 · Units mm</div>
       <div class="block__cell"><b>Material</b>ABS · CH552G</div>
-      <div class="block__cell"><b>Sheet</b>1 of 1</div>
-      <div class="block__cell"><b>Firmware</b><a href="https://github.com/chrisssstos/2button-pad-hack" rel="noopener">chrisssstos/2button-pad-hack</a></div>
+      <div class="block__cell"><b>Pin map</b><a href="https://github.com/chrisssstos/2button-pad-hack" rel="noopener">chrisssstos/2button-pad-hack</a></div>
+      <div class="block__cell"><b>Flasher</b><a href="https://github.com/Afstkla/bitchboy-nano-flasher" rel="noopener">Afstkla/bitchboy-nano-flasher</a></div>
       <div class="block__cell"><b>Prior art</b><a href="https://bitchboy.lol" rel="noopener">bitchboy.lol</a></div>
       <div class="block__cell"><b>Status</b>Unauthorised, affectionate</div>
       <div class="block__cell"><b>Region</b>All of them</div>
@@ -780,8 +788,8 @@ python3 -m venv venv &amp;&amp; ./venv/bin/pip install pyusb mido python-rtmidi
   let ctx = null;
 
   const boot = [
-    '<b>$ ./venv/bin/python pad.py monitor</b>',
-    'connected  1209:0001 "MIDI Pad"',
+    '<b>$ python pad.py monitor --port Nano</b>',
+    'connected  1209:0001 "BitchBoy Nano"',
     'listening  ch 1 · note mode',
     '<i>press a key</i>'
   ];
